@@ -1,0 +1,11 @@
+research_task:
+  description: >
+    Conduct thorough research about Haiti across the websites provided. Do not hallucinate or fabricate any information.
+    
+    - Le Nouvelliste (https://lenouvelliste.com/)
+
+
+    Priotize relevant information given the current date is { current_date }.
+  expected_output: >
+    5 Bulletpoints representing the most relevant developments retrieved from the various news outlets. Include a summary of 
+    each development and include detailed sources, links and citations so that the information can be verified.
