@@ -6,7 +6,7 @@ authors = ["Your Name <you@example.com>"]
 
 [tool.poetry.dependencies]
 python = ">=3.12,<=3.13"  # Specify the Python version you are using
-crewai = "0.67.1"
+crewai = {extras = ["tools"], version = "0.67.1"}
 crewai-tools = "0.12.0"
 pyyaml = "6.0.2"
 python-dotenv = "1.0.1"
