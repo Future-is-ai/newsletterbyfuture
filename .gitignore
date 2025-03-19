@@ -140,6 +140,10 @@ venv.bak/
 # mkdocs documentation
 /site
 
+credentials.json
+
+newsletterbyfuture-86a8417476a8.json
+
 # mypy
 .mypy_cache/
 .dmypy.json
