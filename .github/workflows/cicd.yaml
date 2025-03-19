@@ -2,7 +2,7 @@ name: Build and Deploy to Cloud Run Job
 
 on:
   push:
-    branches: ["NewsletterByLucas"]
+    branches: ["nathanVertex"]
 
 env:
   PROJECT_ID: ${{ vars.PROJECT_ID }} # Google Cloud project id
