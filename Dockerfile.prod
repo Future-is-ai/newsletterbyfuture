@@ -1,0 +1,27 @@
+# Utiliser l'image de base Python 3.12-slim
+FROM python:3.12-slim
+
+# Mettre à jour les paquets et installer des dépendances de compilation
+RUN apt-get update && \
+    apt-get install -y build-essential
+
+# Définir le répertoire de travail dans le conteneur
+WORKDIR /code
+
+# Installer Poetry
+RUN pip install --no-cache-dir poetry
+
+# Copier les fichiers de configuration Poetry (pyproject.toml et poetry.lock)
+COPY pyproject.toml poetry.lock /code/
+
+# Copier tout le reste du code dans le conteneur
+COPY . /code/
+
+# Installer les dépendances du projet à l'aide de Poetry
+RUN poetry install --no-root --no-cache
+
+# Définir la variable d'environnement PYTHONPATH pour que Python cherche dans /code
+ENV PYTHONPATH=/code
+
+# Définir la commande pour exécuter l'application avec Poetry
+CMD ["sh", "-c", "poetry install && poetry run crewai_gcp"]
