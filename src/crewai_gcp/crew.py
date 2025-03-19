@@ -9,7 +9,7 @@ load_dotenv()
 from crewai_tools import ScrapeWebsiteTool
 
 scrape_web_tool = ScrapeWebsiteTool()
-os.environ["GEMINI_API_KEY"]= os.getenv("GEMINI_API-KEY")
+os.environ["GEMINI_API_KEY"]= os.getenv("GEMINI_API_KEY")
 
 @CrewBase
 class CrewaiGcpCrew:
