@@ -1,8 +1,16 @@
 #!/usr/bin/env python
 import sys
 import logging
+
+from datetime import datetime
 from crewai_gcp.crew import CrewaiGcpCrew
 from crewai_gcp import Mailing as mailing
+from crewai_gcp.helpers.format_news_for_email import format_news_for_email
+# vvv YAML Configuration vvv
+current_date = datetime.now().strftime("%Y-%m-%d") # Include current date for context
+replacements = {
+    "current_date": current_date
+}
 
 # This main file is intended to be a way for your to run your
 # crew locally, so refrain from adding necessary logic into this file.
@@ -26,33 +34,23 @@ def run():
     inputs = {"topic": "AI LLMs"}
     res = CrewaiGcpCrew().crew().kickoff(inputs=inputs)
     #print(res.to_dict())
-
-    def generate_markdown(data):
-        md_content = ""
-        for entry in data['results']:
-            headline = entry['headline']
-            description = entry['description']
-            md_content += f"## {headline}\n\n{description}\n\n"
-            md_content += "### Sources:\n"
-            for source in entry['source']:
-                md_content += f"- [{source['name']}]({source['url']})\n"
-            md_content += "\n"  # Add a newline between entries
-        return md_content
+    
+    service = mailing.gmail_authenticate()
+    email_list = ["nathanph.brigot@gmail.com","nathan.brigot@fr.ey.com"]
+    for email in email_list:
+        if bool(email) :
+            mailing.send_message(service, [email.strip()], "Newsletter about AI LLMs", format_news_for_email(res.pydantic, current_date))
 
     # Generate markdown content
-    print("generate markdown contente")
-    markdown_content = generate_markdown(res.to_dict())
+    # print("generate markdown contente")
+    # markdown_content = generate_markdown(res.to_dict())
 
-    # Write to a .md file
-    with open("report.md", "w") as file:
-        file.write(markdown_content)
+    # # Write to a .md file
+    # with open("report.md", "w") as file:
+    #     file.write(markdown_content)
 
-    print("Written .md file")   
-    service = mailing.gmail_authenticate()
-    mailing.send_message(service, ["nathanph.brigot@gmail.com","nathan.brigot@fr.ey.com"], "Newsletter about AI LLMs", markdown_content)
-
-    print("Markdown file has been generated successfully.")
-    logging.info("this file has been generated successfully")
+    # print("Markdown file has been generated successfully.")
+    # logging.info("this file has been generated successfully")
 
 def train():
     """

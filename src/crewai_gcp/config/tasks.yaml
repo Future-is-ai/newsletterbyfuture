@@ -1,10 +1,19 @@
+# research_task:
+#   description: >
+#     Conduct a thorough research about {topic}
+#     Make sure you find any interesting and relevant information given
+#     the current year is 2024.
+#   expected_output: >
+#     A list with 10 bullet points of the most relevant information about {topic}. Each bullet point must be provided with its sources as urls to reach the information.
+
 research_task:
   description: >
-    Conduct a thorough research about {topic}
-    Make sure you find any interesting and relevant information given
-    the current year is 2024.
+    Conduct thorough research about Haiti across the websites provided. Do not hallucinate or fabricate any information.
+    - Le Nouvelliste (https://lenouvelliste.com/)
+    Priotize relevant information given the current date is 21/03/2025.
   expected_output: >
-    A list with 10 bullet points of the most relevant information about {topic}. Each bullet point must be provided with its sources as urls to reach the information.
+    5 Bulletpoints representing the most relevant developments retrieved from the various news outlets. Include a summary of 
+    each development and include detailed sources, links and citations so that the information can be verified.
 
 reporting_task:
   description: >

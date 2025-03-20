@@ -69,7 +69,7 @@ def add_attachment(message, filename):
     
 def build_message(destination, obj, body, attachments=[]):
     if not attachments: # no attachments given
-        message = MIMEText(body)
+        message = MIMEText(body, "html")
         message['to'] = ", ".join(destination)
         message['from'] = our_email
         message['subject'] = obj
@@ -95,4 +95,4 @@ def send_message(service, destination, obj, body, attachments=[]):
 # get the Gmail API service
 service = gmail_authenticate()
 print("authentificate")
-send_message(service, ["nathanph.brigot@gmail.com","nathan.brigot@fr.ey.com"], "This is a subject", "This is the body of the email")
+# send_message(service, ["nathanph.brigot@gmail.com","nathan.brigot@fr.ey.com"], "This is a subject", "This is the body of the email")
