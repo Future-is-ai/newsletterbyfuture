@@ -49,7 +49,7 @@ def run():
 
     print("Written .md file")   
     service = mailing.gmail_authenticate()
-    mailing.send_message(service, "nathanph.brigot@gmail.com", "Newsletter about AI LLMs", markdown_content)
+    mailing.send_message(service, ["nathanph.brigot@gmail.com","nathan.brigot@fr.ey.com"], "Newsletter about AI LLMs", markdown_content)
 
     print("Markdown file has been generated successfully.")
     logging.info("this file has been generated successfully")

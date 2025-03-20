@@ -70,7 +70,7 @@ def add_attachment(message, filename):
 def build_message(destination, obj, body, attachments=[]):
     if not attachments: # no attachments given
         message = MIMEText(body)
-        message['to'] = destination
+        message['to'] = ", ".join(destination)
         message['from'] = our_email
         message['subject'] = obj
     else:
