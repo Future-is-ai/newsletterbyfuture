@@ -18,7 +18,7 @@ def format_news_for_email(news_results: NewsResults, current_date: str) -> str:
 
         source_links = []
         for source in news.source:
-            source_links.append(f"<a href='https://www.{source.url}'>{source.name}</a>")
+            source_links.append(f"<a href='{source.url}'>{source.name}</a>")
   
         email_body += ", ".join(source_links) + "</p>\n"
         email_body += "<hr>\n"
