@@ -75,7 +75,7 @@ def build_message(destination, obj, body, attachments=[]):
         message['subject'] = obj
     else:
         message = MIMEMultipart()
-        message['to'] = destination
+        message['to'] = ", ".join(destination)
         message['from'] = our_email
         message['subject'] = obj
         message.attach(MIMEText(body))
