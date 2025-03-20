@@ -8,8 +8,8 @@
 
 research_task:
   description: >
-    Conduct thorough research about Haiti across the websites provided. Do not hallucinate or fabricate any information.
-    - Le Nouvelliste (https://lenouvelliste.com/)
+    Conduct thorough research about AI across the websites provided. Do not hallucinate or fabricate any information.
+    - Forbes (https://www.forbes.com/ai/ )
     Priotize relevant information given the current date is 21/03/2025.
   expected_output: >
     5 Bulletpoints representing the most relevant developments retrieved from the various news outlets. Include a summary of 
@@ -20,7 +20,7 @@ reporting_task:
     Review the context you got and expand each topic into a full section for a report.
     Make sure the report is detailed and contains any and all relevant information.
     Source
-    - Le Nouvelliste (https://lenouvelliste.com/)
+    - Forbes (https://www.forbes.com/ai/ )
   expected_output: >
     A fully fledge reports with the mains topics, each with a full section of information.
     Formatted as markdown without '```'. Include detailed sources, links and citations so that the information can be verified.

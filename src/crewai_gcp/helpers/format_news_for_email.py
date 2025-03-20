@@ -2,11 +2,6 @@ from application_schema.news_results import NewsResults
 
 def format_news_for_email(news_results: NewsResults, current_date: str) -> str:
 
-    print("format_news_for_email")
-    for result in news_results.results:
-        print(result)
-
-
     email_body = f"<h2>Today's Summary {current_date}</h2>\n"
     email_body += "<p>Here are the latest updates:</p>\n"
     
