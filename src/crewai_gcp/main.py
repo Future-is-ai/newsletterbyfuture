@@ -51,7 +51,7 @@ def run():
     for email in email_list:
         first_name = email.split('.')[0].capitalize()
         if bool(email) :
-            mailing.send_message(service, [email.strip()], first_name + "test2, ton résumé quotidien de l’innovation 🔥", format_news_for_email(res.pydantic, current_date))
+            mailing.send_message(service, [email.strip()], first_name + ", ton résumé quotidien de l’innovation 🔥", format_news_for_email(res.pydantic, current_date))
 
     # Generate markdown content
     # print("generate markdown contente")
