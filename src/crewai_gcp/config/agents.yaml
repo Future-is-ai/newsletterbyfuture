@@ -1,7 +1,7 @@
 researcher:
   llm: gemini_llm
   role: >
-    {topic} Senior Data Researcher
+    {topic} Senior Researcher
   goal: >
     Uncover cutting-edge developments in {topic}
   backstory: >

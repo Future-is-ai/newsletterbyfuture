@@ -36,11 +36,22 @@ def run():
     #print(res.to_dict())
     
     service = mailing.gmail_authenticate()
-    email_list = ["nathanph.brigot@gmail.com","nathan.brigot@fr.ey.com", "kennyaarroyoo@gmail.com"]
+    email_list = ["nathanph.brigot@gmail.com","nathan.brigot@fr.ey.com"]
+    # email_list = [
+    #     "lucas.treiber@fr.ey.com",
+    #     "joseph.harari@fr.ey.com",
+    #     "hamid.filali@fr.ey.com",
+    #     "emeline.lahaye@fr.ey.com",
+    #     "nathan.brigot@fr.ey.com",
+    #     "marin.lavigne@fr.ey.com",
+    #     "charlotte.cazelles@fr.ey.com",
+    #     "aurelien.martin@fr.ey.com"
+    # ]
+
     for email in email_list:
         first_name = email.split('.')[0].capitalize()
         if bool(email) :
-            mailing.send_message(service, [email.strip()], first_name + ", ton résumé quotidien de l’innovation 🔥", format_news_for_email(res.pydantic, current_date))
+            mailing.send_message(service, [email.strip()], first_name + "test, ton résumé quotidien de l’innovation 🔥", format_news_for_email(res.pydantic, current_date))
 
     # Generate markdown content
     # print("generate markdown contente")
