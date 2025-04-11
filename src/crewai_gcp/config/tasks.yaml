@@ -14,8 +14,8 @@ research_task:
     - MIT Technology Review (https://www.technologyreview.com/c/ai/)
 
     Your goal is to collect **5 relevant and recent articles**. Focus on topics related to the US, Big Tech (GAFAM), and major research breakthroughs.
-    
-    If a website or article is inaccessible, try the next one in the list. Stop only when 5 usable sources are collected.
+
+    In any case, i want you to find information about the subjects and give them.
     Do **not summarize** or rephrase the content — just extract the **raw data**.
 
   expected_output: >
