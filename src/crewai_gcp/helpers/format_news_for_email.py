@@ -3,7 +3,7 @@ from application_schema.news_results import NewsResults
 def format_news_for_email(news_results: NewsResults, current_date: str) -> str:
 
     email_body = f"<h2>Today's Summary {current_date}</h2>\n"
-    email_body += "<p>Here are the latest updates:</p>\n"
+    email_body += "<p>What's New Today</p>\n"
     
     for idx, news in enumerate(news_results.results, start=1):
 
