@@ -14,18 +14,15 @@ research_task:
     - MIT Technology Review (https://www.technologyreview.com/c/ai/)
     - Wired – AI: https://www.wired.com/tag/artificial-intelligence/
     - TechCrunch – AI: https://techcrunch.com/tag/artificial-intelligence/
-    - The Guardian – AI: https://www.theguardian.com/technology/artificialintelligenceai
-    - BBC – AI: https://www.bbc.com/news/topics/c9vdq62j8v6t/artificial-intelligence
-    - CNBC – AI: https://www.cnbc.com/artificial-intelligence/
 
 
-    Your goal is to try to collect **5 relevant and recent articles**. Focus on topics related to the US, Big Tech (GAFAM), and major research breakthroughs.
+    Your goal is to try to collect **2-5 relevant and recent articles**. Focus on topics related to the US, Big Tech (GAFAM), and major research breakthroughs.
 
     In any case, i want you to find information about the subjects and give them. So if you need, you can look for other sources from other website.
     Do **not summarize** or rephrase the content — just extract the **raw data**.
 
   expected_output: >
-    A list of 5 items max, each containing:
+    A list of 2-5 items max, each containing:
     - Article title
     - Full original excerpt or relevant section of the article (up to 2 paragraphs)
     - Name of the source (e.g., Forbes)
@@ -37,12 +34,14 @@ reporting_task:
     Based on the raw content collected by the Searcher agent, create a polished and structured newsletter section for each topic.
 
     Expand on the information to make it clear, insightful, and engaging for readers. Avoid copying the content — instead, summarize and explain
-    using your own words.
+    using your own words. Summarize of 50 words max.
 
     Prioritize clarity, conciseness, and relevance. Emphasize developments from the US, Big Tech (GAFAM), and research institutions.
 
+    You have to put a link for the source.
+
   expected_output: >
-    5 sections max, each including:
+    5 articles max, each including:
     - A clear and catchy title (you have to include emojis)
     - 1-2 short paragraphs explaining the topic
     - Mention of the source (e.g., [Forbes](https://...))

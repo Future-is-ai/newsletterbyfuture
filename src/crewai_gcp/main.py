@@ -38,15 +38,14 @@ def run():
     service = mailing.gmail_authenticate()
     email_list = ["nathanph.brigot@gmail.com","nathan.brigot@fr.ey.com"]
     # email_list = [
-    #     "nathanph.brigot@gmail.com",
+    #     "nathan.brigot@fr.ey.com",
     #     "lucas.treiber@fr.ey.com",
-    #     "joseph.harari@fr.ey.com",
     #     "hamid.filali@fr.ey.com",
     #     "emeline.lahaye@fr.ey.com",
-    #     "nathan.brigot@fr.ey.com",
-    #     "marin.lavigne@fr.ey.com",
     #     "charlotte.cazelles@fr.ey.com",
-    #     "aurelien.martin@fr.ey.com"
+    #     "aurelien.martin@fr.ey.com",
+    #     "ange.bernard@fr.ey.com",
+    #     "alexander.borisov@fr.ey.com"
     # ]
 
     for email in email_list:
