@@ -12,6 +12,12 @@ research_task:
     - The Verge (https://www.theverge.com/ai-artificial-intelligence/)
     - Forbes (https://www.forbes.com/ai/)
     - MIT Technology Review (https://www.technologyreview.com/c/ai/)
+    - Wired – AI: https://www.wired.com/tag/artificial-intelligence/
+    - TechCrunch – AI: https://techcrunch.com/tag/artificial-intelligence/
+    - The Guardian – AI: https://www.theguardian.com/technology/artificialintelligenceai
+    - BBC – AI: https://www.bbc.com/news/topics/c9vdq62j8v6t/artificial-intelligence
+    - CNBC – AI: https://www.cnbc.com/artificial-intelligence/
+
 
     Your goal is to try to collect **5 relevant and recent articles**. Focus on topics related to the US, Big Tech (GAFAM), and major research breakthroughs.
 
@@ -37,7 +43,7 @@ reporting_task:
 
   expected_output: >
     5 sections max, each including:
-    - A clear and catchy title (you can include emojis)
+    - A clear and catchy title (you have to include emojis)
     - 1-2 short paragraphs explaining the topic
     - Mention of the source (e.g., [Forbes](https://...))
     - Attribution of any original quote if used
