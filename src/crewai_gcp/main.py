@@ -80,14 +80,14 @@ def run():
         for name in files:
             if "report_test3.md" in name:
                 print(os.path.join(root, name))
-                
+
     markdown_file_path = os.path.join('/workspaces/NathanVertex/src/crewai_gcp/helpers', 'report_test3.md')
     print(markdown_file_path)
     for email in email_list:
         print("Chemin courant :", os.getcwd())
         first_name = email.split('.')[0].capitalize()
         subject = f"{first_name}, Your daily dose of innovation is here 🔥"
-        markdown_file_path = os.path.join('/workspaces/NathanVertex/src/crewai_gcp/helpers', 'report_test3.md')
+        markdown_file_path = os.path.join('/code/src/crewai_gcp/helpers/report_test3.md', 'report_test3.md')
         print(f"markdown_file_path : {markdown_file_path}")
         mailing.send_message_V2(service, [email.strip()], subject, markdown_file_path )
 
