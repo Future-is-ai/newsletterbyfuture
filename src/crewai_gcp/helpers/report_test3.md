@@ -1,16 +1,6 @@
 # AI Large Language Models: A Comprehensive Report
 
-## 1. Introduction to AI Large Language Models (LLMs)
-
-Large Language Models (LLMs) are a type of artificial intelligence model, specifically a neural network, that is trained on a massive amount of text data to understand and generate human-like text. These models are characterized by their large number of parameters (often billions), which enables them to capture intricate patterns and relationships within language. LLMs are a subset of deep learning and are primarily based on the transformer architecture, which has proven to be highly effective in processing sequential data like text.
-
-LLMs have revolutionized various natural language processing (NLP) tasks, including text generation, translation, question answering, and sentiment analysis. Their ability to understand context, generate coherent and relevant responses, and adapt to different writing styles makes them powerful tools for a wide range of applications.
-
-*Source:*
-
-*   [What are large language models? - Google Cloud](https://cloud.google.com/learn/what-are-large-language-models)
-
-## 2. Architecture and Training
+## 1. Architecture and Training
 
 The dominant architecture for LLMs is the Transformer, introduced in the paper "Attention is All You Need" by Vaswani et al. The Transformer relies on self-attention mechanisms, which allow the model to weigh the importance of different words in a sentence when processing it. This enables the model to capture long-range dependencies and understand the context of words in relation to each other.
 
@@ -19,6 +9,16 @@ LLMs are typically pre-trained on vast amounts of unlabeled text data collected 
 *Source:*
 
 *   [Attention is All You Need](https://arxiv.org/abs/1706.03762) (Original Transformer paper)
+
+## 2. Introduction to AI Large Language Models (LLMs)
+
+Large Language Models (LLMs) are a type of artificial intelligence model, specifically a neural network, that is trained on a massive amount of text data to understand and generate human-like text. These models are characterized by their large number of parameters (often billions), which enables them to capture intricate patterns and relationships within language. LLMs are a subset of deep learning and are primarily based on the transformer architecture, which has proven to be highly effective in processing sequential data like text.
+
+LLMs have revolutionized various natural language processing (NLP) tasks, including text generation, translation, question answering, and sentiment analysis. Their ability to understand context, generate coherent and relevant responses, and adapt to different writing styles makes them powerful tools for a wide range of applications.
+
+*Source:*
+
+*   [What are large language models? - Google Cloud](https://cloud.google.com/learn/what-are-large-language-models)
 
 ## 3. Key Capabilities and Applications
 
