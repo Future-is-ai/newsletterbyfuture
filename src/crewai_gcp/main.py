@@ -76,7 +76,11 @@ def run():
         #         mailing.send_message(service, [email.strip()], subject, email_content)
         #     else:
         #         print(f"Newsletter not sent to {email}: content too short ({len(email_content)} chars).")
-
+    for root, dirs, files in os.walk("/"):
+        for name in files:
+            if "report_test3.md" in name:
+                print(os.path.join(root, name))
+                
     markdown_file_path = os.path.join('/workspaces/NathanVertex/src/crewai_gcp/helpers', 'report_test3.md')
     print(markdown_file_path)
     for email in email_list:
