@@ -37,7 +37,7 @@ def run():
     #print(res.to_dict())
     
     service = mailing.gmail_authenticate()
-    email_list = ["nathanph.brigot@gmail.com", "lucas.treiber@fr.ey.com"]
+    email_list = ["nathanph.brigot@gmail.com", "nathan.brigot@fr.ey.com"]
     # email_list = [
     #     "nathan.brigot@fr.ey.com",
     #     "nathanph.brigot@gmail.com",

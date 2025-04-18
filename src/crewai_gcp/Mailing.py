@@ -109,7 +109,12 @@ def build_message_V2(destination, obj, markdown_file_path):
     return {'raw': raw}
 
 def send_message_V2(service, destination, obj, markdown_file_path):
-    message = build_message_V2(destination, obj, markdown_file_path)
+    # message = build_message_V2(destination, obj, markdown_file_path)
+    try:
+        message = build_message_V2(destination, obj, markdown_file_path)
+    except Exception as e:
+        print(f"[ERROR] build_message_V2 failed: {e}")
+        raise
     return service.users().messages().send(
         userId="me",
         body=build_message_V2(destination, obj, markdown_file_path)
