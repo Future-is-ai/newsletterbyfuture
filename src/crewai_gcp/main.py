@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import sys
 import logging
+import os
 
 from datetime import datetime
 from crewai_gcp.crew import CrewaiGcpCrew
@@ -32,11 +33,23 @@ def run():
     """
     import json
     inputs = {"topic": "AI LLMs"}
-    res = CrewaiGcpCrew().crew().kickoff(inputs=inputs)
+    # res = CrewaiGcpCrew().crew().kickoff(inputs=inputs)
     #print(res.to_dict())
     
     service = mailing.gmail_authenticate()
-    email_list = ["nathanph.brigot@gmail.com","nathan.brigot@fr.ey.com"]
+    email_list = ["nathanph.brigot@gmail.com", "lucas.treiber@fr.ey.com"]
+    # email_list = [
+    #     "nathan.brigot@fr.ey.com",
+    #     "nathanph.brigot@gmail.com",
+    #     "antoine.bichon@fr.ey.com",
+    #     "thibault.gouvier@fr.ey.com",
+    #     "paul.ballet@fr.ey.com",
+    #     "anne.marie.timar@fr.ey.com",
+    #     "lynn.thoumy@fr.ey.com",
+    #     "emeline.lahaye@fr.ey.com",
+    #     "bilal.khatib@fr.ey.com",
+    # ]
+   
     # email_list = [
     #     "nathan.brigot@fr.ey.com",
     #     "lucas.treiber@fr.ey.com",
@@ -45,13 +58,37 @@ def run():
     #     "charlotte.cazelles@fr.ey.com",
     #     "aurelien.martin@fr.ey.com",
     #     "ange.bernard@fr.ey.com",
-    #     "alexander.borisov@fr.ey.com"
+    #     "alexander.borisov@fr.ey.com" 
     # ]
 
+    # for email in email_list:
+    #     first_name = email.split('.')[0].capitalize()
+    #     if bool(email) :
+    #         mailing.send_message(service, [email.strip()], first_name + ", ton résumé quotidien de l’innovation 🔥", format_news_for_email(res.pydantic, current_date))
+
+    # for email in email_list:
+        # first_name = email.split('.')[0].capitalize()
+        # if bool(email):
+        #     email_content = format_news_for_email(res.pydantic, current_date)
+            
+        #     if len(email_content) >= 750:
+        #         subject = f"{first_name}, ton résumé quotidien de l’innovation 🔥"
+        #         mailing.send_message(service, [email.strip()], subject, email_content)
+        #     else:
+        #         print(f"Newsletter not sent to {email}: content too short ({len(email_content)} chars).")
+
+    markdown_file_path = os.path.join('/workspaces/NathanVertex/src/crewai_gcp/helpers', 'report_test3.md')
+    print(markdown_file_path)
     for email in email_list:
+        print("Chemin courant :", os.getcwd())
         first_name = email.split('.')[0].capitalize()
-        if bool(email) :
-            mailing.send_message(service, [email.strip()], first_name + ", ton résumé quotidien de l’innovation 🔥", format_news_for_email(res.pydantic, current_date))
+        subject = f"{first_name}, Your daily dose of innovation is here 🔥"
+        markdown_file_path = os.path.join('/workspaces/NathanVertex/src/crewai_gcp/helpers', 'report_test3.md')
+        print(f"markdown_file_path : {markdown_file_path}")
+        mailing.send_message_V2(service, [email.strip()], subject, markdown_file_path )
+
+
+
 
     # Generate markdown content
     # print("generate markdown contente")

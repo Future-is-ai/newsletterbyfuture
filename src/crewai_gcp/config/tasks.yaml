@@ -16,13 +16,13 @@ research_task:
     - TechCrunch – AI: https://techcrunch.com/tag/artificial-intelligence/
 
 
-    Your goal is to try to collect **2-5 relevant and recent articles**. Focus on topics related to the US, Big Tech (GAFAM), and major research breakthroughs.
+    Your goal is to try to collect **3-5 relevant and recent articles**. Focus on topics related to the US, Big Tech (GAFAM), and major research breakthroughs.
 
     In any case, i want you to find information about the subjects and give them. So if you need, you can look for other sources from other website.
     Do **not summarize** or rephrase the content — just extract the **raw data**.
 
   expected_output: >
-    A list of 2-5 items max, each containing:
+    A list of 3-5 items max, each containing:
     - Article title
     - Full original excerpt or relevant section of the article (up to 2 paragraphs)
     - Name of the source (e.g., Forbes)
@@ -42,7 +42,7 @@ reporting_task:
 
   expected_output: >
     5 articles max, each including:
-    - A clear and catchy title (you have to include emojis)
+    - A clear and catchy title.You have to include 2 emojis
     - 1-2 short paragraphs explaining the topic
     - Mention of the source (e.g., [Forbes](https://...))
     - Attribution of any original quote if used

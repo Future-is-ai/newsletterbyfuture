@@ -14,7 +14,7 @@ from email.mime.audio import MIMEAudio
 from email.mime.base import MIMEBase
 from mimetypes import guess_type as guess_mime_type
 from dotenv import load_dotenv
-import os
+import markdown
 load_dotenv()
 
 # Request all access (permission to read/send/receive emails, manage the inbox, and more)
@@ -88,6 +88,31 @@ def send_message(service, destination, obj, body, attachments=[]):
     return service.users().messages().send(
       userId="me",
       body=build_message(destination, obj, body, attachments)
+    ).execute()
+
+    print(f"✅ Email sent to {destination} with subject: '{obj}'")
+
+def build_message_V2(destination, obj, markdown_file_path):
+    # Lire le markdown
+    with open(markdown_file_path, 'r', encoding='utf-8') as f:
+        md_content = f.read()
+
+    # Convertir en HTML
+    html_body = markdown.markdown(md_content)
+
+    message = MIMEText(html_body, "html")
+    message['to'] = ", ".join(destination)
+    message['from'] = our_email
+    message['subject'] = obj
+
+    raw = urlsafe_b64encode(message.as_bytes()).decode()
+    return {'raw': raw}
+
+def send_message_V2(service, destination, obj, markdown_file_path):
+    message = build_message_V2(destination, obj, markdown_file_path)
+    return service.users().messages().send(
+        userId="me",
+        body=build_message_V2(destination, obj, markdown_file_path)
     ).execute()
 
     print(f"✅ Email sent to {destination} with subject: '{obj}'")
