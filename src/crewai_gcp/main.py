@@ -61,79 +61,73 @@ def run():
     #     "alexander.borisov@fr.ey.com" 
     # ]
 
-# email_list = [
-#     "achraf.sanhaji@fr.ey.com",
-#     "alexander.borisov@fr.ey.com",
-#     "alexandre.fougeres@fr.ey.com",
-#     "ambrine.masson@fr.ey.com",
-#     "amer.taleb.al.ajouz@fr.ey.com",
-#     "ange.bernard@fr.ey.com",
-#     "anne.marie.timar@fr.ey.com",
-#     "antoine.chezaubernard@fr.ey.com",
-#     "apolline.rajaonarison@fr.ey.com",
-#     "aurelien.martin@fr.ey.com",
-#     "bilal.khatib@fr.ey.com",
-#     "camille.gal@fr.ey.com",
-#     "celia.chabrant@fr.ey.com",
-#     "celine.lim@fr.ey.com",
-#     "charles.servel@fr.ey.com",
-#     "charlotte.cazelles@fr.ey.com",
-#     "claire.szczerbowski@fr.ey.com",
-#     "clement.delfini@fr.ey.com",
-#     "david.neftel@fr.ey.com",
-#     "dimitri.paimparay@fr.ey.com",
-#     "emeline.lahaye@fr.ey.com",
-#     "emmanuel.layot@fr.ey.com",
-#     "emna.turki@fr.ey.com",
-#     "eugenie.laborde@fr.ey.com",
-#     "ghislain.halatre@fr.ey.com",
-#     "ghizlane.alami.badaoui@fr.ey.com",
-#     "guillaume.herbelin@fr.ey.com",
-#     "hamid.filali@fr.ey.com",
-#     "helene.marque@fr.ey.com",
-#     "hugues.lorez@fr.ey.com",
-#     "ines.jaidane2@fr.ey.com",
-#     "iouri.dadhemar.de.cransac@fr.ey.com",
-#     "isabelle.yang@fr.ey.com",
-#     "joseph.harari@fr.ey.com",
-#     "julien.achrafi@fr.ey.com",
-#     "julien.lejeune@fr.ey.com",
-#     "juliette.piccolin@fr.ey.com",
-#     "juliette.vallat@fr.ey.com",
-#     "karine.ferus@fr.ey.com",
-#     "khadija.jaber@fr.ey.com",
-#     "laziza.bellahbib@fr.ey.com",
-#     "leo.cadiou@fr.ey.com",
-#     "lucas.treiber@fr.ey.com",
-#     "lynn.thoumy@fr.ey.com",
-#     "marie.astrid.reverdy@fr.ey.com",
-#     "marin.lavigne@fr.ey.com",
-#     "martin.harb@fr.ey.com",
-#     "matthieu.bouix@fr.ey.com",
-#     "meriem.abid1@fr.ey.com",
-#     "myriam.monteilhet@fr.ey.com",
-#     "nathan.brigot@fr.ey.com",
-#     "nell.souryadhay@fr.ey.com",
-#     "nicolas.seauve@fr.ey.com",
-#     "ombeline.furet@fr.ey.com",
-#     "paul.ballet@fr.ey.com",
-#     "paul.henri.behague@fr.ey.com",
-#     "philippine.perrier@fr.ey.com",
-#     "sarah.snoussi@fr.ey.com",
-#     "sebastien.courcambeck@fr.ey.com",
-#     "sophie.diallo@fr.ey.com",
-#     "sosthene.lapeze@fr.ey.com",
-#     "taki.eddine.chalbi@fr.ey.com",
-#     "thibault.gouvier@fr.ey.com",
-#     "thibault.klajzyngier@fr.ey.com",
-#     "toufik.hartani@fr.ey.com"
-# ]
-
-    email_list = ["nathanph.brigot@gmail.com", "nathan.brigot@fr.ey.com"]
-    # for email in email_list:
-    #     first_name = email.split('.')[0].capitalize()
-    #     if bool(email) :
-    #         mailing.send_message(service, [email.strip()], first_name + ", ton résumé quotidien de l’innovation 🔥", format_news_for_email(res.pydantic, current_date))
+    email_list = [
+        "achraf.sanhaji@fr.ey.com",
+        "alexander.borisov@fr.ey.com",
+        "alexandre.fougeres@fr.ey.com",
+        "ambrine.masson@fr.ey.com",
+        "amer.taleb.al.ajouz@fr.ey.com",
+        "ange.bernard@fr.ey.com",
+        "anne.marie.timar@fr.ey.com",
+        "antoine.chezaubernard@fr.ey.com",
+        "apolline.rajaonarison@fr.ey.com",
+        "aurelien.martin@fr.ey.com",
+        "bilal.khatib@fr.ey.com",
+        "camille.gal@fr.ey.com",
+        "celia.chabrant@fr.ey.com",
+        "celine.lim@fr.ey.com",
+        "charles.servel@fr.ey.com",
+        "charlotte.cazelles@fr.ey.com",
+        "claire.szczerbowski@fr.ey.com",
+        "clement.delfini@fr.ey.com",
+        "david.neftel@fr.ey.com",
+        "dimitri.paimparay@fr.ey.com",
+        "emeline.lahaye@fr.ey.com",
+        "emmanuel.layot@fr.ey.com",
+        "emna.turki@fr.ey.com",
+        "eugenie.laborde@fr.ey.com",
+        "ghislain.halatre@fr.ey.com",
+        "ghizlane.alami.badaoui@fr.ey.com",
+        "guillaume.herbelin@fr.ey.com",
+        "hamid.filali@fr.ey.com",
+        "helene.marque@fr.ey.com",
+        "hugues.lorez@fr.ey.com",
+        "ines.jaidane2@fr.ey.com",
+        "iouri.dadhemar.de.cransac@fr.ey.com",
+        "isabelle.yang@fr.ey.com",
+        "joseph.harari@fr.ey.com",
+        "julien.achrafi@fr.ey.com",
+        "julien.lejeune@fr.ey.com",
+        "juliette.piccolin@fr.ey.com",
+        "juliette.vallat@fr.ey.com",
+        "karine.ferus@fr.ey.com",
+        "khadija.jaber@fr.ey.com",
+        "laziza.bellahbib@fr.ey.com",
+        "leo.cadiou@fr.ey.com",
+        "lucas.treiber@fr.ey.com",
+        "lynn.thoumy@fr.ey.com",
+        "marie.astrid.reverdy@fr.ey.com",
+        "marin.lavigne@fr.ey.com",
+        "martin.harb@fr.ey.com",
+        "matthieu.bouix@fr.ey.com",
+        "meriem.abid1@fr.ey.com",
+        "myriam.monteilhet@fr.ey.com",
+        "nathan.brigot@fr.ey.com",
+        "nell.souryadhay@fr.ey.com",
+        "nicolas.seauve@fr.ey.com",
+        "ombeline.furet@fr.ey.com",
+        "paul.ballet@fr.ey.com",
+        "paul.henri.behague@fr.ey.com",
+        "philippine.perrier@fr.ey.com",
+        "sarah.snoussi@fr.ey.com",
+        "sebastien.courcambeck@fr.ey.com",
+        "sophie.diallo@fr.ey.com",
+        "sosthene.lapeze@fr.ey.com",
+        "taki.eddine.chalbi@fr.ey.com",
+        "thibault.gouvier@fr.ey.com",
+        "thibault.klajzyngier@fr.ey.com",
+        "toufik.hartani@fr.ey.com"
+    ]
 
     # for email in email_list:
         # first_name = email.split('.')[0].capitalize()
@@ -145,11 +139,7 @@ def run():
         #         mailing.send_message(service, [email.strip()], subject, email_content)
         #     else:
         #         print(f"Newsletter not sent to {email}: content too short ({len(email_content)} chars).")
-    # for root, dirs, files in os.walk("/"):
-    #     for name in files:
-    #         if "report_test3.md" in name:
-    #             print(os.path.join(root, name))
-                
+        
     markdown_file_path = os.path.join('/workspaces/NathanVertex/src/crewai_gcp/helpers', 'report_test3.md')
     print(markdown_file_path)
     for email in email_list:
